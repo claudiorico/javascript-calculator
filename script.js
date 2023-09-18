@@ -36,10 +36,6 @@ function execOper(oper) {
   operadores = oper.split("+");
   if (operadores.length > 1) {
     return operadores.reduce((acumulator, currentValue) => {
-      //   return (
-      //     (isNaN(acumulator) ? execOper(acumulator) : Number(acumulator)) +
-      //     (isNaN(currentValue) ? execOper(currentValue) : Number(currentValue))
-      //   );
       return execMathCalc(acumulator, currentValue, "+");
     });
   }
@@ -50,41 +46,23 @@ function execOper(oper) {
       let operNew = operadores[0][pos];
       let operadoresNew = [operadores[0].substring(0, pos), operadores[1]];
       return operadoresNew.reduce((acumulator, currentValue) => {
-        // return math_it_up[operNew](
-        //   isNaN(acumulator) ? execOper(acumulator) : Number(acumulator),
-        //   isNaN(currentValue)
-        //     ? execOper(currentValue)
-        //     : Number(currentValue) * -1
-        // );
         return execMathCalc(acumulator, currentValue, operNew) * -1;
       });
     }
 
     return operadores.reduce((acumulator, currentValue) => {
-      //   return (
-      //     (isNaN(acumulator) ? execOper(acumulator) : Number(acumulator)) -
-      //     (isNaN(currentValue) ? execOper(currentValue) : Number(currentValue))
-      //   );
       return execMathCalc(acumulator, currentValue, "-");
     });
   }
   operadores = oper.split("/");
   if (operadores.length > 1) {
     return operadores.reduce((acumulator, currentValue) => {
-      //   return (
-      //     (isNaN(acumulator) ? execOper(acumulator) : Number(acumulator)) /
-      //     (isNaN(currentValue) ? execOper(currentValue) : Number(currentValue))
-      //   );
       return execMathCalc(acumulator, currentValue, "/");
     });
   }
   operadores = oper.split("*");
   if (operadores.length > 1) {
     return operadores.reduce((acumulator, currentValue) => {
-      //   return (
-      //     (isNaN(acumulator) ? execOper(acumulator) : Number(acumulator)) *
-      //     (isNaN(currentValue) ? execOper(currentValue) : Number(currentValue))
-      //   );
       return execMathCalc(acumulator, currentValue, "*");
     });
   }
