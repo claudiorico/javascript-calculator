@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Share+Tech+Mono";
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7")
+      format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #c2c2d6;
+  font-family: digital;
+  font-size: 2.9rem;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.display {
+  text-align: right;
+  line-height: 3.5rem;
+}
+.operation-display {
+  font-size: 2rem;
+  color: orange;
+  line-height: 2rem;
+  height: 2rem;
+  vertical-align: text-top;
+}
+.calculator-container {
+  background-color: black;
+  padding: 0.8rem;
+  display: flex;
+  flex-flow: column;
+  gap: 0.2rem;
+}
+
+.padding-container,
+._3-container {
+  display: flex;
+  flex-flow: column;
+  gap: 0.2rem;
+}
+
+.button {
+  background: #4d4d4d;
+  width: 8rem;
+  height: 6.5rem;
+  font-family: Share Tech Mono, monospace;
+  font-size: 2rem;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  color: black;
+  outline: 0.05em solid grey;
+  z-index: 3;
+}
+
+.ac-button {
+  background: rgb(172, 57, 57);
+  width: 16.2rem;
+}
+
+._4-buttons,
+._3-buttons,
+._2-buttons,
+.eq-container,
+.ac-container {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.eq-button {
+  height: 13.2rem;
+}
+
+.zero-button {
+  width: 16.2rem;
+}
